@@ -8,7 +8,7 @@ The icons should have square aspect ratio (width equal to height) or stretching 
 
 The icon files used for the drives will be copied to `C:\ProgramData\DriveIconSetter` for storage.
 
-This software requires Administrator's permissions to modify registry keys in:
+This software requires Administrator's permissions to modify registry keys in:  
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\explorer\DriveIcons`
 
 Happy tweaking!
