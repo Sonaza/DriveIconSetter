@@ -242,7 +242,7 @@ namespace DriveIconSetter
 				if (iconBitmap.Width != iconBitmap.Height)
 				{
 					DialogResult result = MessageBox.Show(
-						"Selected icon does not have square aspect ratio (width equal to height) and some stretching will occur if used as icon.\n\nDo you want to continue?",
+						"Selected icon does not have square aspect ratio (width equal to height) and some stretching may occur if used as icon.\n\nDo you want to continue?",
 						"Icon Aspect Ratio",
 						MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 

@@ -128,7 +128,7 @@ This software can be used to easily set hard drive icons visible in Windows Expl
 
 Supported icon formats are .ico and .png. Any other image format is not supported.
 
-The icons should have square aspect ratio (width equal to height) or stretching will occur.
+The icons should have square aspect ratio (width equal to height) or stretching may occur.
 
 The icon files used for the drives will be copied to C:\ProgramData\DriveIconSetter for storage.
 
