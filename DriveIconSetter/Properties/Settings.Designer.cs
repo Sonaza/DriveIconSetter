@@ -34,5 +34,17 @@ namespace DriveIconSetter.Properties {
                 this["LastSelectedDirectory"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool DisplayInformationDialog {
+            get {
+                return ((bool)(this["DisplayInformationDialog"]));
+            }
+            set {
+                this["DisplayInformationDialog"] = value;
+            }
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace DriveIconSetter
 	{
 		private Dictionary<string, string> currentIcons = new Dictionary<string, string>();
 
-		private const string programDataDirectory = @"C:\ProgramData\DriveIconSetter";
+		private string programDataDirectory = getProgramDataFolderPath();
 
 		// HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\explorer\DriveIcons
 		private const string driveIconsRegistryBasePath = @"SOFTWARE\Microsoft\Windows\CurrentVersion\explorer\DriveIcons";
@@ -39,24 +39,40 @@ namespace DriveIconSetter
 		
 		private void MainForm_Shown(object sender, EventArgs e)
 		{
-			displayFirstRunDialog();
+			displayInformationDialog();
+		}
+
+		public static string getProgramDataFolderPath()
+		{
+			string programDataFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
+			return Path.Combine(programDataFolderPath, "DriveIconSetter");
 		}
 
 		private void initialize()
 		{
+			Console.WriteLine(programDataDirectory);
+
 			if (!Directory.Exists(programDataDirectory))
 			{
 				Directory.CreateDirectory(programDataDirectory);
 			}
 		}
 
-		private void displayFirstRunDialog()
+		private void displayInformationDialog(bool force = false)
 		{
-			MessageBox.Show(
-				Properties.Resources.FirstRunHelp,
-				"Drive Icon Setter", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			if (Properties.Settings.Default.DisplayInformationDialog || force)
+			{
+				InformationDialog informationDialog = new InformationDialog();
+				informationDialog.StartPosition = FormStartPosition.CenterParent;
+				informationDialog.ShowDialog();
+			}
 		}
-		
+
+		private void infoButton_Click(object sender, EventArgs e)
+		{
+			displayInformationDialog(true);
+		}
+
 		private void refreshState()
 		{
 			loadCurrentDriveIcons();
@@ -387,5 +403,6 @@ namespace DriveIconSetter
 			}
 			return isAdmin;
 		}
+
 	}
 }

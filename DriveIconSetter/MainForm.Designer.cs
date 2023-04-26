@@ -52,6 +52,7 @@ namespace DriveIconSetter
 			this.label3 = new System.Windows.Forms.Label();
 			this.panelDriveLettersUsed = new System.Windows.Forms.Panel();
 			this.panelSetDriveIcon = new System.Windows.Forms.Panel();
+			this.infoButton = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.iconPreviewPictureBox)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.activeDriveIconsGrid)).BeginInit();
 			this.panelDriveLettersUsed.SuspendLayout();
@@ -262,17 +263,31 @@ namespace DriveIconSetter
 			this.panelSetDriveIcon.Size = new System.Drawing.Size(682, 62);
 			this.panelSetDriveIcon.TabIndex = 9;
 			// 
+			// infoButton
+			// 
+			this.infoButton.Location = new System.Drawing.Point(651, 12);
+			this.infoButton.Name = "infoButton";
+			this.infoButton.Size = new System.Drawing.Size(39, 23);
+			this.infoButton.TabIndex = 10;
+			this.infoButton.Text = "Info";
+			this.infoButton.UseVisualStyleBackColor = false;
+			this.infoButton.Click += new System.EventHandler(this.infoButton_Click);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = global::DriveIconSetter.Properties.Resources.Background;
 			this.ClientSize = new System.Drawing.Size(700, 650);
+			this.Controls.Add(this.infoButton);
 			this.Controls.Add(this.panelSetDriveIcon);
 			this.Controls.Add(this.activeDriveIconsGrid);
 			this.Controls.Add(this.panelDriveLettersUsed);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.MaximizeBox = false;
+			this.MaximumSize = new System.Drawing.Size(716, 689);
+			this.MinimumSize = new System.Drawing.Size(716, 689);
 			this.Name = "MainForm";
 			this.Text = "Drive Icon Setter";
 			this.Shown += new System.EventHandler(this.MainForm_Shown);
@@ -303,6 +318,7 @@ namespace DriveIconSetter
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Panel panelDriveLettersUsed;
 		private System.Windows.Forms.Panel panelSetDriveIcon;
+		private System.Windows.Forms.Button infoButton;
 	}
 }
 

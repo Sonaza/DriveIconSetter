@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Drive Icon Setter")]
 [assembly: AssemblyDescription("Program to set drive icons via registry in Windows")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("sonaza.fi")]
+[assembly: AssemblyCompany("Sonaza")]
 [assembly: AssemblyProduct("Drive Icon Setter for Windows")]
 [assembly: AssemblyCopyright("Copyright © Sonaza 2023 (sonaza.fi)")]
 [assembly: AssemblyTrademark("")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.1.0")]
-[assembly: AssemblyFileVersion("1.0.1.0")]
+[assembly: AssemblyVersion("1.0.2.0")]
+[assembly: AssemblyFileVersion("1.0.2.0")]
